@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<list key="org.eclipse.jst.ws.client.type.java">
+		<item value="/004-client3-app/modi/RequestHandlerClass.wsdl"/>
+		<item value="/004-SOA-Client-app/modi2/RequestHandlerClass.wsdl"/>
+		<item value="/004-SOA-Client-2/modi/RequestHandlerClass.wsdl"/>
+		<item value="/004-SOA-Client-app/modi/RequestHandlerClass.wsdl"/>
+		<item value="/003-Web-Client/noida/RqstHndlrClass.wsdl"/>
+		<item value="/002-ClientWeb/noida/RqstHndlrClass.wsdl"/>
+	</list>
+</section>

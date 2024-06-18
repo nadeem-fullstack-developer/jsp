@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;JDBCUtil.java&apos; to &apos;004-dynamic-web-app/src/main/java/max&apos;&#x0D;&#x0A;- Original project: &apos;23-jspProjectLive&apos;&#x0D;&#x0A;- Destination element: &apos;004-dynamic-web-app/src/main/java/max&apos;&#x0D;&#x0A;- Original element: &apos;max.JDBCUtil.java&apos;" description="Copy compilation unit" destination="=004-dynamic-web-app/src\/main\/java&lt;max" element1="/src\/main\/java&lt;max{JDBCUtil.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1717678684437" units="1" version="1.0"/>
+</session>

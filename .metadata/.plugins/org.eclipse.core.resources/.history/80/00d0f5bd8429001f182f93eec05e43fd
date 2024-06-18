@@ -1,0 +1,19 @@
+import com.sun.jersey.api.client.Client;
+import com.sun.jersey.api.client.ClientResponse;
+import com.sun.jersey.api.client.WebResource;
+
+
+public class CL {
+public static void main(String[] args) {
+	try {
+		String url="http://localhost:8081/ARestServer12/ok/rht/data1?st="+"rama";
+		Client client = Client.create();
+		WebResource wr = client.resource(url);
+ClientResponse r = wr.accept("application/text").post(ClientResponse.class);
+	   String rst = r.getEntity(String.class);
+	System.out.println(rst);
+	} catch (Exception e) {
+		e.printStackTrace();
+	}
+}
+}

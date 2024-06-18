@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;RqstHndlrClass.java&apos; to &apos;001-web-app/src/main/java/max&apos;&#x0D;&#x0A;- Original project: &apos;31-SOAServer-App&apos;&#x0D;&#x0A;- Destination element: &apos;001-web-app/src/main/java/max&apos;&#x0D;&#x0A;- Original element: &apos;RqstHndlrClass.java&apos;" description="Copy file" destination="=001-web-app/src\/main\/java&lt;max" element1="src/main/java/max/RqstHndlrClass.java" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1717646971528" units="0" version="1.0"/>
+</session>

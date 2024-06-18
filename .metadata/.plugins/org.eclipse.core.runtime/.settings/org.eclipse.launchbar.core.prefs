@@ -1,0 +1,9 @@
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=win32
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.wst.server,Tomcat\ v9.0\ Server\ at\ localhost/name=Tomcat v9.0 Server at localhost
+configDescList=org.eclipse.launchbar.core.descriptorType.default\:Tomcat v9.0 Server at localhost,org.jboss.tools.wtp.server.launchbar.ModuleDescriptorType\:01-secondProject-app,org.jboss.tools.wtp.server.launchbar.ModuleDescriptorType\:/WEB-INF/classes/max/FirstServelet.java
+eclipse.preferences.version=1
+org.eclipse.launchbar.core.descriptorType.default\:Tomcat\ v9.0\ Server\ at\ localhost/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
+org.jboss.tools.wtp.server.launchbar.ModuleDescriptorType\:01-secondProject-app/activeLaunchMode=run
+org.jboss.tools.wtp.server.launchbar.ModuleDescriptorType\:01-secondProject-app/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.wst.server\:Tomcat v9.0 Server at localhost

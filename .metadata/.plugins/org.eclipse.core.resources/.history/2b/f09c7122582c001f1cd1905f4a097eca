@@ -1,0 +1,41 @@
+package maxit;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.sun.jersey.api.client.Client;
+import com.sun.jersey.api.client.ClientResponse;
+import com.sun.jersey.api.client.WebResource;
+
+@WebServlet("/add")
+public class AddServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+
+		try {
+
+			int fn = Integer.parseInt(request.getParameter("fn"));
+			int sn = Integer.parseInt(request.getParameter("sn"));
+
+			PrintWriter out = response.getWriter();
+
+			String url = "http://localhost:9595/ARestServer12/ok/rht/add?n1=" + fn + "&n2=" + sn + "";
+			Client client = Client.create();
+			WebResource wr = client.resource(url);
+			ClientResponse r = wr.accept("application/text").post(ClientResponse.class);
+			String rst = r.getEntity(String.class);
+			out.println(rst);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+}

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Use this file to deploy some handlers/chains and services      --><!-- Two ways to do this:                                           --><!--   java org.apache.axis.client.AdminClient deploy.wsdd          --><!--      after the axis server is running                          --><!-- or                                                             --><!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   --><!--      from the same directory that the Axis engine runs         --><deployment xmlns="http://xml.apache.org/axis/wsdd/" xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from RequestHandlerClassService WSDL service -->
+
+  <service name="RequestHandlerClass" provider="java:RPC" style="document" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://max"/>
+      <parameter name="wsdlServiceElement" value="RequestHandlerClassService"/>
+      <parameter name="schemaQualified" value="http://max"/>
+      <parameter name="wsdlServicePort" value="RequestHandlerClass"/>
+      <parameter name="className" value="max.RequestHandlerClass"/>
+      <parameter name="wsdlPortType" value="RequestHandlerClass"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <operation xmlns:retNS="http://max" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="getStateDataByXML" qname="getStateDataByXML" returnQName="retNS:getStateDataByXMLReturn" returnType="rtns:string" soapAction="">
+      </operation>
+      <operation xmlns:retNS="http://max" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="getXmlData" qname="getXmlData" returnQName="retNS:getXmlDataReturn" returnType="rtns:string" soapAction="">
+        <parameter xmlns:pns="http://max" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:xml" type="tns:string"/>
+      </operation>
+      <parameter name="allowedMethods" value="getXmlData getStateDataByXML"/>
+
+  </service>
+</deployment>

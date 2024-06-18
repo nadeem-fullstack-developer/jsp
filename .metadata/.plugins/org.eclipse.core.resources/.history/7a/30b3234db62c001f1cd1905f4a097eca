@@ -1,0 +1,70 @@
+package max;
+
+import javax.ws.rs.POST;
+import javax.ws.rs.Path;
+import javax.ws.rs.QueryParam;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+//http://localhost:8081/ARestServer12/ok/rht/data
+@Path("rht")
+public class RequestHandlerTest {
+	@POST
+	@Path("data")
+	/*
+	 * public String getData(String s) { return "Mr " + s.toUpperCase(); }
+	 */
+	public String getData() {
+		return new LocationDAO().getDetail();
+	}
+
+	/*
+	 * @POST
+	 * 
+	 * @Path("data1") public String getData1(@QueryParam("st") String s) { return
+	 * "Mis " + s.toUpperCase(); }
+	 */
+
+	// http://localhost:8081/ARestServer12/ok/rht/add
+
+	@POST
+	@Path("add")
+	public String sum(@QueryParam("n1") int n1, @QueryParam("n1") int n2) {
+
+		int c = n1 + n2;
+		return "ADD " + c;
+
+	}
+
+	// http://localhost:8081/ARestServer12/ok/rht/save
+
+	@POST
+	@Path("save")
+	public String saveDetail(String s) {
+
+		System.out.println("Mai aa gaya in server" + s);
+
+		Emp emp = new Emp();
+
+		try {
+			JSONObject object = new JSONObject();
+
+		
+			emp.setName(object.getString("name"));
+			emp.setAdd(object.getString("add"));
+			emp.setPhone(object.getString("phone"));
+
+			LocationDAO dao = new LocationDAO();
+			dao.insert(emp);
+
+		} catch (JSONException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		return "SUCCESSFULL Inserted Data";
+
+	}
+
+}

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://max" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://max" xmlns:intf="http://max" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://max" xmlns="http://www.w3.org/2001/XMLSchema">
+   <element name="getStateDataByXMLReturn" type="xsd:string"/>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="getStateDataByXMLRequest">
+
+   </wsdl:message>
+
+   <wsdl:message name="getStateDataByXMLResponse">
+
+      <wsdl:part element="impl:getStateDataByXMLReturn" name="getStateDataByXMLReturn">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:portType name="RequestHandlerClass">
+
+      <wsdl:operation name="getStateDataByXML">
+
+         <wsdl:input message="impl:getStateDataByXMLRequest" name="getStateDataByXMLRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getStateDataByXMLResponse" name="getStateDataByXMLResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="RequestHandlerClassSoapBinding" type="impl:RequestHandlerClass">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="getStateDataByXML">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getStateDataByXMLRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getStateDataByXMLResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="RequestHandlerClassService">
+
+      <wsdl:port binding="impl:RequestHandlerClassSoapBinding" name="RequestHandlerClass">
+
+         <wsdlsoap:address location="http://localhost:9595/004-dynamic-web-app/services/RequestHandlerClass"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>
