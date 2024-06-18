@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://max" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://max" xmlns:intf="http://max" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://max" xmlns="http://www.w3.org/2001/XMLSchema">
+   <element name="n" type="xsd:string"/>
+   <element name="getFactoReturn" type="xsd:string"/>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="getFactoRequest">
+
+      <wsdl:part element="impl:n" name="n">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getFactoResponse">
+
+      <wsdl:part element="impl:getFactoReturn" name="getFactoReturn">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:portType name="RqstHndlrClass">
+
+      <wsdl:operation name="getFacto" parameterOrder="n">
+
+         <wsdl:input message="impl:getFactoRequest" name="getFactoRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getFactoResponse" name="getFactoResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="RqstHndlrClassSoapBinding" type="impl:RqstHndlrClass">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="getFacto">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getFactoRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getFactoResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="RqstHndlrClassService">
+
+      <wsdl:port binding="impl:RqstHndlrClassSoapBinding" name="RqstHndlrClass">
+
+         <wsdlsoap:address location="http://localhost:8080/001-web-app/services/RqstHndlrClass"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>
